@@ -12,11 +12,75 @@
       "version": {
         "major": 0,
         "minor": 0,
-        "level": "alpha",
+        "level": "beta",
         "patch": 0
       }
-    }
+    },
+    "software": {
+      "display": {
+        "title": "schedule",
+        "label": "schedule"
+      }
+    },
+    "timestamp": "2017-11-20T15:35:32+11:00"
   },
   "software": {
+    "base": {
+      "name": "schedule",
+      "accepts": [
+        "ManagedEngine",
+        "ManagedService"
+      ],
+      "publisher_namespace": "EnginesSystem",
+      "type_path": "schedule",
+      "service_handle_field": "title",
+      "parent_image": "engines/servicebase",
+      "run_as_user": "cron",
+      "deployment_type": "worker",
+      "persistent": true
+    },
+    "consumer_params": [
+      {
+        "name": "action_type",
+        "value": "schedule",
+        "mandatory": true,
+        "immutable": true,
+        "input": {
+          "type": "select",
+          "label": "Action type",
+          "collection": {
+            "items": {
+              "schedule": "Schedule",
+              "action": "Action"
+            }
+          }
+        }
+      },
+      {
+        "name": "cron_job",
+        "mandatory": true,
+        "input": {
+          "type": "boolean",
+          "label": "The action"
+        }
+      },
+      {
+        "name": "tiltle",
+        "mandatory": true,
+        "immutable": true,
+        "input": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "when",
+        "mandatory": true,
+        "input": {
+          "type": "string",
+          "label": "Cron when specification",
+          "placeholder": "* * * * *"
+        }
+      }
+    ]
   }
 }

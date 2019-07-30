@@ -22,7 +22,7 @@
         "label": "schedule"
       }
     },
-    "timestamp": "2018-02-03T15:02:43+11:00"
+    "timestamp": "2019-07-30T16:02:01+10:00"
   },
   "software": {
     "base": {
@@ -52,6 +52,7 @@
         "value": "schedule",
         "mandatory": true,
         "immutable": true,
+        "ask_at_build_time": true,
         "input": {
           "type": "select",
           "label": "Action type",
@@ -66,7 +67,7 @@
       },
       {
         "name": "cron_job",
-        "mandatory": true,
+        "ask_at_build_time": true,
         "input": {
           "type": "string",
           "label": "The action",
@@ -77,6 +78,7 @@
         "name": "tiltle",
         "mandatory": true,
         "immutable": true,
+        "ask_at_build_time": true,
         "input": {
           "type": "string"
         }

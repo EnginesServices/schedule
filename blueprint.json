@@ -22,7 +22,7 @@
         "label": "schedule"
       }
     },
-    "timestamp": "2019-07-30T16:02:01+10:00"
+    "timestamp": "2019-07-30T16:06:55+10:00"
   },
   "software": {
     "base": {
@@ -35,7 +35,8 @@
       "deployment_type": "worker",
       "default_stop_timeout": 0,
       "restart_attempts": 0,
-      "run_as_user": "cron"
+      "run_as_user": "cron",
+      "create_user": "0"
     },
     "disposition": {
       "persistent": true
@@ -75,7 +76,7 @@
         }
       },
       {
-        "name": "tiltle",
+        "name": "title",
         "mandatory": true,
         "immutable": true,
         "ask_at_build_time": true,
